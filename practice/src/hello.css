@@ -1,0 +1,6 @@
+/* 방법2. css 빼서 적용시키기 */
+.red {
+    background-color:red;
+    font-size: 48px;
+    padding: 16px;
+}
