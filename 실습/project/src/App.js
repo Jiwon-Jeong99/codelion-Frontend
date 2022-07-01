@@ -3,7 +3,6 @@ import {
   Footer,
   FooterBig,
   FooterSmall,
-  Header,
   LoadingDiv,
   LoadingImg,
   Main,
@@ -19,16 +18,10 @@ import {
   SlogunBig,
   SlogunSection,
   SlogunSmall,
-  SubHeaderDiv,
-  TitleBig,
-  TitleLogoDiv,
-  TitleSmall,
 } from "./styledComponent";
 
 // yarn add @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons
 import {
-  faSun,
-  faMoon,
   faArrowsRotate,
   faPenToSquare,
   faLocationPin,
@@ -40,10 +33,13 @@ import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { darkTheme, GlobalStyles, lightTheme } from "./styles";
 import { ThemeProvider } from "styled-components";
 import loadingIcon from "./loading.svg";
+import { useState } from "react";
 
 function App() {
-  const darkMode = true;
+  const [darkMode, setDarkMode] = useState(true);
+  // 로딩변수
   const loading = false;
+  // 게시글이 없으면 없다고 띄워줄
   const isPost = true;
 
   return (
@@ -51,23 +47,6 @@ function App() {
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
         <MediaDiv>
-          <Header>
-            <TitleLogoDiv>
-              <TitleBig>멋사</TitleBig>
-              <TitleSmall>익명게시판</TitleSmall>
-            </TitleLogoDiv>
-            <SubHeaderDiv>
-              {darkMode ? (
-                <div>
-                  <FontAwesomeIcon icon={faSun} />
-                </div>
-              ) : (
-                <div>
-                  <FontAwesomeIcon icon={faMoon} />
-                </div>
-              )}
-            </SubHeaderDiv>
-          </Header>
           <Main>
             <SlogunSection>
               <SlogunBig>Hack Your Life</SlogunBig>
