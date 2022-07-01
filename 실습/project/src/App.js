@@ -112,7 +112,7 @@ function App() {
           <Footer>
             <FontAwesomeIcon icon={faReact} />
             <FooterBig>for react study</FooterBig>
-            <FooterSmall>hyunjoebrother</FooterSmall>
+            <FooterSmall>2022 by. jiwon</FooterSmall>
           </Footer>
         </MediaDiv>
       </ThemeProvider>
